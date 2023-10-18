@@ -333,4 +333,15 @@ public class Potatohead {
 
         return output;
     }
+
+	/** Boolean hasAllAppendages() 
+	accessor method for hasAllAppendages
+	@return true if has two arms and two legs, return false if he doesnt have all */
+
+	public boolean hasAllAppendages() {
+		return hasAllAppendages;
+	}
+
 }
+
+
