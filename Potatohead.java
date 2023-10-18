@@ -16,6 +16,8 @@ public class Potatohead {
 
     private boolean hasMouth;
 
+    private int numOfArms;
+
     private int numOfFeet;
 
     private boolean hasFeet;
@@ -25,9 +27,6 @@ public class Potatohead {
     private boolean hasArm;
 
 
-
-
-
     /*  the no argument constructor  */
     public Potatohead() {
         /* initialize ***ALL*** instance variables here. */
@@ -35,7 +34,7 @@ public class Potatohead {
         /* Do NOT set Objects to null */
         eyeNumber = 2;
         // STEP 2 OF 5: initialize your instance variable HERE
-	hasEars = false;
+	      hasEars = false;
 	    
         earNumber = 2;
  
@@ -43,6 +42,9 @@ public class Potatohead {
 
         rHandAccessory = "none";
         hasMouth = false;
+
+	      numOfArms = 0;
+
 	
 	      hasFeet = false;
 
@@ -54,6 +56,7 @@ public class Potatohead {
       
       
       
+
     }
 
 
@@ -122,12 +125,22 @@ public class Potatohead {
     public void setGlasses(boolean changeGlasses){
 	    hasGlasses = changeGlasses;
     }
+	
+    /**
+    	    void setNumOfArms(int _numOfArms)
+	    mutator method for numOfArms
+	    @param _numOfArms changes the value of numOfArms to any number
+     */
+    public void setNumOfArms(int _numOfArms){
+	    numOfArms = _numOfArms;
+    }
 
     /**
 		  void setHasMouth(boolean _hasMouth)
   		mutator method for hasMouth
 		  @param _hasMouth changes the value of hasMouth to true or false 
   	*/
+
     public void setHasMouth(boolean _hasMouth){
 	    hasMouth = _hasMouth;
     }
@@ -198,7 +211,14 @@ public class Potatohead {
     public int getNumOfEars() {
         return earNumber;
     }
-
+     /**
+    	int getNumOfArms()
+    	accessor method for numOfArms
+    	@return numOfArms an int describing the number of arms.
+    */
+    public int getNumOfArms() {
+	return numOfArms;
+    }
 	
     /**
     	Boolean hasGlasses()
@@ -259,12 +279,14 @@ public class Potatohead {
         output += "Number Of Eyes: " + eyeNumber + ". ";
         // STEP 5 OF 5: Add your instance variable to the toString() method using += HERE
         output += "Number of Ears: " + earNumber + ". ";
+	      output += "Number of arms: " + numOfArms + ". ";
         if (hasEars == true){
           output += "Has ears. ";
         }
         else {
           output += "Does not have ears. ";
         }
+
         if (hasGlasses == true){
           output += "Is wearing glasses. ";
         }
