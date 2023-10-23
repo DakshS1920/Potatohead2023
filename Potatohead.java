@@ -53,6 +53,8 @@ public class Potatohead {
         hasArm = false;
 
 	      numOfFeet = 2;
+	
+	hasAllAppendages = false;
       
       
       
@@ -64,14 +66,24 @@ public class Potatohead {
 
     // STEP 3 OF 5: Add an accessor method for yr instance var WITH JAVADOC COMMENT
     // !!! NOTE: You MUST add Javadoc comments for your accessor method and mutator method
+	
 	/**
-        void setEars(boolean _setEars)
-	mutator method for hasEars
-        @param _setHasEars for what the user desires
+    	void setAllAppendages(boolean _hasAllAppendages)
+     	mutator method for hasAllAppendages
+      	@param _hasAllAppendages changes the value of the boolean to true or false
+    */
+    public void setAllAppendages(boolean _hasAllAppendages){
+	    hasAllAppendages = _hasAllAppendages;
+    }
         */
     public void setHasEars(boolean _setHasEars){
 	    hasEars = _setHasEars;
     }
+	/**
+        void setEars(boolean _setEars)
+	mutator method for hasEars
+        @param _setHasEars for what the user desires
+	 
     /**
     	void setArm(boolean _hasArm)
      	mutator method for hasArm
@@ -333,4 +345,21 @@ public class Potatohead {
 
         return output;
     }
-}
+
+
+    /** Boolean hasAllApandages 
+	accessor method for hasAllAppendages
+	@return if Mr.PotatoHead has two arms and two legs */
+
+	public boolean hasAllAppendages(){
+		return hasAllAppendages;
+	}
+	
+
+
+	
+}   
+
+
+
+
